@@ -2,8 +2,8 @@
 # 选择构建用基础镜像。如需更换，请到[dockerhub官方仓库](https://hub.docker.com/_/java?tab=tags)自行选择后替换。
 FROM gradle:7.6.1-jdk17-alpine as build
 
-WORKDIR /home/gradle/src
-COPY --chown=gradle:gradle . /home/gradle/src
+WORKDIR /home/gradle/project
+COPY --chown=gradle:gradle . /home/gradle/project
 # 指定构建过程中的工作目录
 
 # 将src目录下所有文件，拷贝到工作目录中src目录下（.gitignore/.dockerignore中文件除外）
@@ -36,7 +36,7 @@ RUN apk add ca-certificates
 WORKDIR /app
 
 # 将构建产物jar包拷贝到运行时目录中
-COPY --from=build /app/build/output/mini-bootstrap.jar app.jar
+COPY --from=build /home/gradle/project/build/output/mini-bootstrap.jar app.jar
 
 # 暴露端口
 # 此处端口必须与「服务设置」-「流水线」以及「手动上传代码包」部署时填写的端口一致，否则会部署失败。
