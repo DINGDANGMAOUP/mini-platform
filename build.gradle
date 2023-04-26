@@ -60,8 +60,7 @@ subprojects {
     }
     repositories {
         maven {
-            url 'http://10.10.201.24:8081/repository/maven-public/'
-            allowInsecureProtocol = true
+            url 'https://maven.aliyun.com/repository/public/'
         }
         mavenCentral()
     }
