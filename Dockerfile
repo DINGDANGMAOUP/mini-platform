@@ -14,7 +14,7 @@ COPY --chown=gradle:gradle . /app
 
 # 执行代码编译命令
 # 自定义settings.xml, 选用国内镜像源以提高下载速度
-RUN gradle clean build --no-daemon
+RUN gradle build --no-daemon
 
 
 # 选择运行时基础镜像
