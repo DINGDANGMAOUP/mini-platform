@@ -58,10 +58,6 @@ subprojects {
             }
         }
     }
-//    repositories {
-//
-//        mavenCentral()
-//    }
     dependencies {
         api platform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
         api platform("com.alibaba.cola:cola-components-bom:${colaVersion}")
