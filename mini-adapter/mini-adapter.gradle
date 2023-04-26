@@ -1,0 +1,6 @@
+description = 'mini-adapter'
+
+dependencies {
+    api project(":mini-app")
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}
