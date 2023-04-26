@@ -3,17 +3,16 @@
 FROM gradle:7.6.1-jdk17-alpine as build
 
 WORKDIR /home/gradle/project
-COPY --chown=gradle:gradle . /home/gradle/project
 # 指定构建过程中的工作目录
 
-# 将src目录下所有文件，拷贝到工作目录中src目录下（.gitignore/.dockerignore中文件除外）
-#COPY . /app/build
+# 将目录下所有文件，拷贝到工作目录中src目录下（.gitignore/.dockerignore中文件除外）
+COPY --chown=gradle:gradle . /home/gradle/project
 
-# 将pom.xml文件，拷贝到工作目录下
-#COPY settings.xml pom.xml /app/
-COPY init.gradle /home/gradle/.gradle/init.gradle
+
 # 执行代码编译命令
 # 自定义settings.xml, 选用国内镜像源以提高下载速度
+COPY init.gradle /home/gradle/.gradle/init.gradle
+
 RUN gradle build --no-daemon
 
 
