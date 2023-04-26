@@ -2,9 +2,9 @@
 # 选择构建用基础镜像。如需更换，请到[dockerhub官方仓库](https://hub.docker.com/_/java?tab=tags)自行选择后替换。
 FROM gradle:7.6.1-jdk17-alpine as build
 
-COPY --chown=gradle:gradle . /home/gradle/src
+WORKDIR /app
+COPY --chown=gradle:gradle . /app
 # 指定构建过程中的工作目录
-WORKDIR /home/gradle/src
 
 # 将src目录下所有文件，拷贝到工作目录中src目录下（.gitignore/.dockerignore中文件除外）
 #COPY . /app/build
