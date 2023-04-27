@@ -14,6 +14,7 @@ ext {
     fastjson2Version = '2.0.24'
     okhttp3Version = '4.10.0'
     mysqlVersion = '8.0.33'
+    mybatisPlusVersion = '3.5.3.1'
     bootstrapProject = project(":mini-bootstrap") as DefaultProject
 }
 allprojects {
@@ -65,6 +66,7 @@ subprojects {
         api platform("com.alibaba.fastjson2:fastjson2-extension-spring6:${fastjson2Version}")
         api platform("com.squareup.okhttp3:okhttp-bom:${okhttp3Version}")
         api platform("com.mysql:mysql-connector-j:${mysqlVersion}")
+        api platform("com.baomidou:mybatis-plus-boot-starter:${mybatisPlusVersion}")
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
         annotationProcessor 'org.projectlombok:lombok'
