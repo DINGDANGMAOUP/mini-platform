@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${MYSQL_ADDRESS}/${MYSQL_DATABASE:mini-platform}
+    url: jdbc:mysql://${MYSQL_ADDRESS}/${MYSQL_DATABASE:mini_platform}
     username: ${MYSQL_USERNAME}
     password: ${MYSQL_PASSWORD}
   config:
