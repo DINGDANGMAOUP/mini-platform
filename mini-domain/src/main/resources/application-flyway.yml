@@ -1,0 +1,18 @@
+#flyway 版本管理规范
+#V<VERSION>__<NAME>.sql
+#Prefix（前缀）：V 用于版本化的迁移， U 用于撤消相同版本迁移， R 用于可重复迁移
+#Version（版本）：带点或下划线的版本可根据需要分隔尽可能多的部分（不适用于可重复的迁移）
+#Separator（分隔符）：__（两个下划线）
+#Description（说明）：下划线或空格将单词分开
+#Suffix（后缀）：.sql
+spring:
+  flyway:
+    baseline-on-migrate: true
+    locations:
+      - classpath:ddl
+    table: mini_platform_flyway_version
+    baseline-description: "init db"
+    baseline-version: 1.0.0
+    schemas:
+      - mini_platform
+    default-schema: mini_platform

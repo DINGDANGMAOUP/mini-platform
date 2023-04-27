@@ -1,12 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_ADDRESS}/${MYSQL_DATABASE:mini-platform}
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+  config:
+    import:
+     - application-flyway.yml
+     - application-mybatisplus.yml
 ---
 spring:
   config:
     activate:
       on-profile: dev
+
 server:
   port: 8099
-
-
 ---
 spring:
   config:

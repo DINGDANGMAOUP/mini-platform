@@ -1,4 +1,5 @@
 import org.gradle.api.internal.project.DefaultProject
+import org.gradle.platform.base.Platform
 import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
@@ -17,7 +18,7 @@ var okhttp3Version = "4.10.0"
 var mysqlVersion = "8.0.33"
 var mybatisPlusVersion = "3.5.3.1"
 var bootstrapProject = project(":mini-bootstrap") as DefaultProject
-
+var flywayVersion = "9.8.1"
 
 
 
@@ -70,6 +71,7 @@ subprojects {
         api(platform("com.squareup.okhttp3:okhttp-bom:${okhttp3Version}"))
         api(platform("com.mysql:mysql-connector-j:${mysqlVersion}"))
         api(platform("com.baomidou:mybatis-plus-boot-starter:${mybatisPlusVersion}"))
+        api(platform("org.flywaydb:flyway-core:${flywayVersion}"))
         compileOnly("org.projectlombok:lombok")
         annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
         annotationProcessor("org.projectlombok:lombok")
