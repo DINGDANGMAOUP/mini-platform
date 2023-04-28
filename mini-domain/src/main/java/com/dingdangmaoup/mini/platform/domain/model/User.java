@@ -8,10 +8,12 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
 
-@EqualsAndHashCode(callSuper = true)
+
 @TableName("mini_user")
 @Data
-public class User extends BaseEntity  {
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+public class User extends BaseEntity {
   /**
    * 用户id
    */

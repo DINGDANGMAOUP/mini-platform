@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 @Slf4j
 @Component
-public class AuditHandler implements MetaObjectHandler {
+public class AuditorAwareHandler implements MetaObjectHandler {
 
     @Override
     public void insertFill(MetaObject metaObject) {

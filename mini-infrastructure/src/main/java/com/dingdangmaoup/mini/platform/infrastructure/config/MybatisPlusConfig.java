@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
  * @author dzhao1
  * @date 2022/12/07
  */
-@MapperScan("com.dingdangmaoup.mini.platform.infrastructure.mapper")
+@MapperScan("com.dingdangmaoup.mini.platform.infrastructure.gateway.mapper")
 @Configuration
 public class MybatisPlusConfig {
 

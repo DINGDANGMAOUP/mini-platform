@@ -3,6 +3,7 @@ package com.dingdangmaoup.mini.platform.domain.model;
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableLogic;
+
 import java.time.LocalDateTime;
 
 import lombok.*;

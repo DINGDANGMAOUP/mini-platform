@@ -1,1 +1,2 @@
 com.dingdangmaoup.mini.platform.infrastructure.config.MybatisPlusConfig
+com.dingdangmaoup.mini.platform.infrastructure.handler.AuditorAwareHandler
