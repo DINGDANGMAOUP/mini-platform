@@ -12,8 +12,5 @@ public class UserGatewayImpl implements UserGateway {
     @Autowired
     MiniAuthorizationService miniAuthorizationService;
 
-    public List test(){
-        return miniAuthorizationService.list();
-    }
 
 }
