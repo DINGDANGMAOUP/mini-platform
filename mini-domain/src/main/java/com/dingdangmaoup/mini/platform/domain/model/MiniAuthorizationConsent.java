@@ -28,7 +28,7 @@ public class MiniAuthorizationConsent extends BaseEntity  {
     /**
      * 
      */
-    @TableId(value = "principal_name")
+    @TableField(value = "principal_name")
     private String principalName;
 
     /**

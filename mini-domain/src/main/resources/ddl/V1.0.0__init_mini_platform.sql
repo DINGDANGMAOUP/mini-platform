@@ -55,6 +55,7 @@ CREATE TABLE mini_authorization (
     device_code_issued_at timestamp DEFAULT NULL,
     device_code_expires_at timestamp DEFAULT NULL,
     device_code_metadata blob DEFAULT NULL,
+    oidc_id_token_claims varchar(2000) NULL,
     create_by   VARCHAR(255) NULL,
     create_time datetime     NULL,
     update_by   VARCHAR(255) NULL,

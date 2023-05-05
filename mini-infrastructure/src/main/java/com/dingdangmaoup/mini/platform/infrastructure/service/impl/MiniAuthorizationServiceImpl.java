@@ -6,6 +6,8 @@ import com.dingdangmaoup.mini.platform.infrastructure.service.MiniAuthorizationS
 import com.dingdangmaoup.mini.platform.infrastructure.gateway.mapper.MiniAuthorizationMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 /**
 * @author dzhao1
 * @description 针对表【mini_authorization】的数据库操作Service实现
@@ -15,6 +17,35 @@ import org.springframework.stereotype.Service;
 public class MiniAuthorizationServiceImpl extends ServiceImpl<MiniAuthorizationMapper, MiniAuthorization>
     implements MiniAuthorizationService{
 
+    @Override
+    public Optional<MiniAuthorization> findByStateOrAuthorizationCodeValueOrAccessTokenValueOrRefreshTokenValue(String token) {
+        return baseMapper.findByStateOrAuthorizationCodeValueOrAccessTokenValueOrRefreshTokenValue(token);
+    }
+
+    @Override
+    public Optional<MiniAuthorization> findByState(String token) {
+        return baseMapper.findByState(token);
+    }
+
+    @Override
+    public Optional<MiniAuthorization> findByAuthorizationCodeValue(String token) {
+        return baseMapper.findByAuthorizationCodeValue(token);
+    }
+
+    @Override
+    public Optional<MiniAuthorization> findByAccessTokenValue(String token) {
+        return baseMapper.findByAccessTokenValue(token);
+    }
+
+    @Override
+    public Optional<MiniAuthorization> findByRefreshTokenValue(String token) {
+        return baseMapper.findByRefreshTokenValue(token);
+    }
+
+    @Override
+    public Optional<MiniAuthorization> findByOidcIdTokenValue(String token) {
+        return baseMapper.findByOidcIdTokenValue(token);
+    }
 }
 
 

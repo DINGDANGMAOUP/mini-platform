@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 /**
  * @TableName mini_authorization
@@ -57,25 +57,25 @@ public class MiniAuthorization extends BaseEntity {
      *
      */
     @TableField(value = "authorization_code_issued_at")
-    private LocalDateTime authorizationCodeIssuedAt;
+    private Instant authorizationCodeIssuedAt;
 
     /**
      *
      */
     @TableField(value = "authorization_code_expires_at")
-    private LocalDateTime authorizationCodeExpiresAt;
+    private Instant authorizationCodeExpiresAt;
 
     /**
      *
      */
     @TableField(value = "access_token_issued_at")
-    private LocalDateTime accessTokenIssuedAt;
+    private Instant accessTokenIssuedAt;
 
     /**
      *
      */
     @TableField(value = "access_token_expires_at")
-    private LocalDateTime accessTokenExpiresAt;
+    private Instant accessTokenExpiresAt;
 
     /**
      *
@@ -93,49 +93,49 @@ public class MiniAuthorization extends BaseEntity {
      *
      */
     @TableField(value = "oidc_id_token_issued_at")
-    private LocalDateTime oidcIdTokenIssuedAt;
+    private Instant oidcIdTokenIssuedAt;
 
     /**
      *
      */
     @TableField(value = "oidc_id_token_expires_at")
-    private LocalDateTime oidcIdTokenExpiresAt;
+    private Instant oidcIdTokenExpiresAt;
 
     /**
      *
      */
     @TableField(value = "refresh_token_issued_at")
-    private LocalDateTime refreshTokenIssuedAt;
+    private Instant refreshTokenIssuedAt;
 
     /**
      *
      */
     @TableField(value = "refresh_token_expires_at")
-    private LocalDateTime refreshTokenExpiresAt;
+    private Instant refreshTokenExpiresAt;
 
     /**
      *
      */
     @TableField(value = "user_code_issued_at")
-    private LocalDateTime userCodeIssuedAt;
+    private Instant userCodeIssuedAt;
 
     /**
      *
      */
     @TableField(value = "user_code_expires_at")
-    private LocalDateTime userCodeExpiresAt;
+    private Instant userCodeExpiresAt;
 
     /**
      *
      */
     @TableField(value = "device_code_issued_at")
-    private LocalDateTime deviceCodeIssuedAt;
+    private Instant deviceCodeIssuedAt;
 
     /**
      *
      */
     @TableField(value = "device_code_expires_at")
-    private LocalDateTime deviceCodeExpiresAt;
+    private Instant deviceCodeExpiresAt;
 
     /**
      *
@@ -214,6 +214,8 @@ public class MiniAuthorization extends BaseEntity {
      */
     @TableField(value = "device_code_metadata")
     private byte[] deviceCodeMetadata;
+    @TableField(value = "oidc_id_token_claims")
+    private byte[] oidcIdTokenClaims;
 
 
 }
