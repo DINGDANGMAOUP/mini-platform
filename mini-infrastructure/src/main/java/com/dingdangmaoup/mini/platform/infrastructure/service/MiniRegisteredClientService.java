@@ -10,4 +10,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface MiniRegisteredClientService extends IService<MiniRegisteredClient> {
 
+    MiniRegisteredClient findByClientId(String clientId);
 }

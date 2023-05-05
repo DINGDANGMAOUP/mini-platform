@@ -15,6 +15,10 @@ import org.springframework.stereotype.Service;
 public class MiniRegisteredClientServiceImpl extends ServiceImpl<MiniRegisteredClientMapper, MiniRegisteredClient>
     implements MiniRegisteredClientService {
 
+    @Override
+    public MiniRegisteredClient findByClientId(String clientId) {
+        return baseMapper.findByClientId(clientId);
+    }
 }
 
 

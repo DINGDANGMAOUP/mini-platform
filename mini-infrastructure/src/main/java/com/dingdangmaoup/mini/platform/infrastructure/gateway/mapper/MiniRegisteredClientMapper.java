@@ -2,6 +2,7 @@ package com.dingdangmaoup.mini.platform.infrastructure.gateway.mapper;
 
 import com.dingdangmaoup.mini.platform.domain.model.MiniRegisteredClient;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
 * @author dzhao1
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 */
 public interface MiniRegisteredClientMapper extends BaseMapper<MiniRegisteredClient> {
 
+    MiniRegisteredClient findByClientId(@Param("clientId") String clientId);
 }
 
 
